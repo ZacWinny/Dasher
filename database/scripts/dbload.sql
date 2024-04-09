@@ -1,0 +1,1 @@
+insert into table Customer values (1, 'll', ) 
