@@ -7,7 +7,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses:
+        - name: checkout push
+          uses: actions/checkout@v2
         
-            - name: database_installation
-              run: ./database/install/mysql_install.sh
+        - name: Build Docker image
+          run: docker build -t my-image .
+ 
