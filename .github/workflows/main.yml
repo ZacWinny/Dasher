@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses:
+        
+            - name: database_installation
+              run: ./database/install/mysql_install.sh
