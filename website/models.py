@@ -1,6 +1,11 @@
-from . import db
 from flask_login import UserMixin
-from sqlalchemy import Integer, Column, String, Date, Time, Float
+from sqlalchemy import Integer, String, Date, Time, Float
+
+from . import db
+
+
+class UserTypeMixin:
+    user_type = db.Column(String(64), nullable=True)
 
 
 class User(db.Model, UserMixin):
@@ -8,28 +13,27 @@ class User(db.Model, UserMixin):
     email = db.Column(String(120), unique=True, nullable=False)
     password = db.Column(String(128), nullable=False)
     name = db.Column(String(64), nullable=True)
-    user_type = db.Column(String(64), nullable=False)
 
-    def __init__(self, email, password, user_type):
+    def __init__(self, email, password, name):
         self.email = email
         self.password = password
-        self.user_type = user_type
+        self.name = name
 
 
 class Customer(User):
-    __tablename__ = 'customers'  # Define separate table name
+    __tablename__ = 'customers'
 
-    def __init__(self, email, password, name, type):
-        super().__init__(email, password, type)
-        self.name = name
+    def __init__(self, email, password, name, user_type):
+        super().__init__(email, password, name)
+        self.user_type = user_type
 
 
-class Restaurant(User):
-    __tablename__ = 'restaurants'  # Define separate table name
+class Restaurant(User, UserTypeMixin):
+    __tablename__ = 'restaurants'
 
-    def __init__(self, email, password, name, type):
-        super().__init__(email, password, type)
-        self.name = name
+    def __init__(self, email, password, name, user_type):
+        super().__init__(email, password, name)
+        self.user_type = user_type
 
 
 class Order(db.Model):
