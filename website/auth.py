@@ -42,7 +42,7 @@ def sign_up():
 
         user = db.session.query(User.email).filter_by(email=email).first()
         if user:
-           flash('Email already exists.', category='error')
+            flash('Email already exists.', category='error')
         elif len(email) < 4:
             flash('Email must be greater than 3 characters.', category='error')
         elif len(password1) < 7:
@@ -54,11 +54,15 @@ def sign_up():
         else:
             password_hash = generate_password_hash(password1, method='pbkdf2:sha256')
             if role == 'customer':
-                new_user = Customer(email=email, password=password_hash, name=request.form.get('name'), type=role)
+                db.session.close()
+                new_user = Customer(email=email, password=password_hash, name=request.form.get('name'), user_type=role)
+                db.session.add(new_user)
+                db.session.commit()
             elif role == 'business':
-                new_user = Restaurant(email=email, password=password_hash, name=request.form.get('name'), type=role)  # Adjust field as needed
-            db.session.add(new_user)
-            db.session.commit()
+                db.session.close()
+                new_user = Restaurant(email=email, password=password_hash, name=request.form.get('name'), user_type=role)  # Adjust field as needed
+                db.session.add(new_user)
+                db.session.commit()
             login_user(new_user, remember=True)
             flash('Account created.', category='success')
             return redirect(url_for('views.home'))
