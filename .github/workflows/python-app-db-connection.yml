@@ -1,9 +1,9 @@
 name: python-app-db-connection.yml
 on:
   push:
-    branches: [database]
+    branches: [databreak]
   pull_request:
-    branches: [main]
+    branches: [databreak]
 
 jobs:
   build:
