@@ -15,7 +15,11 @@ CREATE TABLE IF NOT EXISTS customers (
 CREATE TABLE IF NOT EXISTS restaurants (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    address VARCHAR(255) NOT NULL
+    address VARCHAR(255) NOT NULL,
+    category varchar(255) null,
+    contact varchar(20) not null,
+    revenue DECIMAL(10, 2) DEFAULT 0,
+
 );
 
 -- create menu_items table
@@ -45,6 +49,24 @@ CREATE TABLE IF NOT EXISTS order_items (
     quantity INT NOT NULL,
     FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (menu_item_id) REFERENCES menu_items(id)
+);
+create table if not exists feedback(
+    id int auto_increment primary key,
+    customer_id int,
+    restaurant_id int,
+    feedback varchar(255),
+    datetime timestamp default current_timestamp,
+    rating int,
+    foreign key (customer_id) references customers(id),
+    foreign key (restaurant_id) references restaurants(id)
+);
+
+create table if not exist revenue_report(
+    id int auto_increment primary key,
+    restaurant_id int,
+    revenue decimal(10,2),
+    report_date date,
+    foreign key (restaurant_id) references restaurants(id)
 );
 
 -- create client user
