@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ restaurant.name }}</h2>
+    <p>Category: {{ restaurant.category }}</p>
+    <p>Address: {{ restaurant.address }}</p>
+
+    <h3>Menu</h3>
+
+<style>
+    .menu-item-image {
+        width: 100%;
+        height: 200px; /* Adjust as needed */
+        object-fit: cover;
+    }
+</style>
+
+    <div class="row">
+        {% for item in menu_items %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+
+                <img src="{{ url_for('static', filename=item.image_path) }}" alt="{{ item.name }} image" class="card-img-top menu-item-image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">${{ item.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

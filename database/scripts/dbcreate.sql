@@ -70,7 +70,7 @@ create table Membership (
    rating int not null,
 
    -- internal constraints
-   constraint pk_feef primary key (feedback_num),
+   constraint pk_feed primary key (feedback_num),
    constraint ck_feed_1 check (rating between 1 and 5),
 
    -- foreign key constraints

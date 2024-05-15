@@ -1,71 +1,102 @@
 from flask_login import UserMixin
-from sqlalchemy import Integer, String, Date, Time, Float
+from datetime import datetime
+from sqlalchemy import Integer, Column, String, DateTime, Float, ForeignKey, Boolean
+from sqlalchemy.orm import relationship
 
 from . import db
 
 
-class UserTypeMixin:
-    user_type = db.Column(String(64), nullable=True)
+class BaseUser(db.Model, UserMixin):
+    __abstract__ = True
+    id = Column(Integer, primary_key=True)
+    email = Column(String(120), unique=True, nullable=False)
+    password = Column(String(128), nullable=False)
+    name = Column(String(64), nullable=True)
+    address = Column(String(128), nullable=False)
+    type = Column(String(50))  # Column to store 'customer' or 'restaurant'
+
+    __mapper_args__ = {
+        'polymorphic_identity': 'type',
+        'polymorphic_on': type
+    }
 
 
-class User(db.Model, UserMixin):
-    id = db.Column(Integer, primary_key=True)
-    email = db.Column(String(120), unique=True, nullable=False)
-    password = db.Column(String(128), nullable=False)
-    name = db.Column(String(64), nullable=True)
-
-    def __init__(self, email, password, name):
-        self.email = email
-        self.password = password
-        self.name = name
-
-
-class Customer(User):
+class Customer(BaseUser):
     __tablename__ = 'customers'
+    __mapper_args__ = {'polymorphic_identity': 'customer'}
 
-    def __init__(self, email, password, name, user_type):
-        super().__init__(email, password, name)
-        self.user_type = user_type
+    membership = Column(Boolean, default=False)
+
+    orders = relationship('Order', backref='customer', lazy='dynamic')  # One-to-many relationship with Order
+
+    def __init__(self, email, password, name, address, membership):
+        super().__init__(email=email, password=password, name=name, address=address)  # Call parent constructor
+        self.membership = membership
 
 
-class Restaurant(User, UserTypeMixin):
+class Restaurant(BaseUser):
     __tablename__ = 'restaurants'
+    __mapper_args__ = {'polymorphic_identity': 'restaurant'}
 
-    def __init__(self, email, password, name, user_type):
-        super().__init__(email, password, name)
-        self.user_type = user_type
+    category = Column(String(64), nullable=False)
+    average_rating = Column(Float, default=0.0)
+
+    menu_items = relationship('MenuItem', backref='restaurant',
+                              lazy='dynamic')  # One-to-many relationship with MenuItem
+    orders = relationship('Order', backref='restaurant', lazy='dynamic')  # One-to-many relationship with Order
+
+    def __init__(self, email, password, name, category, address):
+        super().__init__(email=email, password=password, name=name)  # Call parent constructor
+        self.category = category
+        self.address = address
+
+
+class MenuItem(db.Model):
+    __tablename__ = 'menu_items'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(128), nullable=False)
+    description = Column(String(128), nullable=False)
+    price = Column(Float, nullable=False)
+    restaurant_id = Column(Integer, ForeignKey('restaurants.id'))
+    image_path = db.Column(db.String(255))
+
+    def __init__(self, name, description, price, restaurant_id, image_path):
+        self.name = name
+        self.description = description
+        self.price = price
+        self.restaurant_id = restaurant_id
+        self.image_path = image_path
+
+
+class OrderItem(db.Model):
+    id = Column(Integer, primary_key=True)
+    order_id = Column(Integer, ForeignKey('orders.id'))
+    menu_item_id = Column(Integer, ForeignKey('menu_items.id'))
+    quantity = Column(Integer, nullable=False)
+
+    def __init__(self, order_id, menu_item_id, quantity):
+        self.order_id = order_id
+        self.menu_item_id = menu_item_id
+        self.quantity = quantity
 
 
 class Order(db.Model):
     __tablename__ = 'orders'
 
-    order_num = db.Column(Integer, primary_key=True, autoincrement=True)
-    customer_num = db.Column(Integer, nullable=False)
-    restaurant_num = db.Column(Integer, nullable=False)
-    order_date = db.Column(Date, nullable=False)
-    delivery_date = db.Column(Date, nullable=False)
-    delivery_time = db.Column(Time, nullable=False)
-    total = db.Column(Float, nullable=False)
-    status = db.Column(String(50), nullable=False)
+    id = Column(Integer, primary_key=True)
+    customer_id = Column(Integer, ForeignKey('customers.id'), nullable=False)
+    restaurant_id = Column(Integer, ForeignKey('restaurants.id'), nullable=False)
+    items = relationship('OrderItem', backref='order', lazy='dynamic')  # Many-to-many relationship with OrderItem
+    total_price = Column(Float, nullable=False)
+    service_option = Column(String(64), nullable=False)  # e.g., "Membership", "Pay-on-Demand"
+    status = Column(String(64), nullable=False)  # e.g., "Pending", "Accepted", "Rejected", "Completed"
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)  # Timestamp for order creation
 
-
-class Feedback(db.Model):
-    __tablename__ = 'feedback'
-
-    feedback_num = db.Column(Integer, primary_key=True, autoincrement=True)
-    order_num = db.Column(Integer, nullable=False)
-    customer_name = db.Column(String(50), nullable=False)
-    restaurant_num = db.Column(Integer, nullable=False)
-    feedback_date = db.Column(Date, nullable=False)
-    feedback_text = db.Column(String(500), nullable=False)  #
-    rating = db.Column(Integer, nullable=False)
-
-
-class FoodItem(db.Model):
-    __tablename__ = 'food_items'
-
-    food_num = db.Column(Integer, primary_key=True, autoincrement=True)
-    restaurant_num = db.Column(Integer, nullable=False)
-    name = db.Column(String(50), nullable=False)
-    price = db.Column(Float, nullable=False)
-    category = db.Column(String(50), nullable=False)
+    def __init__(self, customer_id, restaurant_id, items, total_price, service_option):
+        self.customer_id = customer_id
+        self.restaurant_id = restaurant_id
+        self.items = items  # List of OrderItem objects
+        self.total_price = total_price
+        self.service_option = service_option
+        self.status = "Pending"  # Set initial status to pending

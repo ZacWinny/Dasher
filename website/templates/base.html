@@ -13,32 +13,63 @@
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            crossorigin="anonymous"z
+            crossorigin="anonymous"
         />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9JuPHAk6839_VkIKpd8TWAPiVL48G9NE&libraries=places" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+
 
         <title>{% block title %}Home{% endblock %}</title>
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d65454">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d65454">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-              <ul class="navbar-nav">
-                {% if user.is_authenticated %}
-                <a class="nav-item nav-link" id="home" href="/">Home</a>
-                <li style="float: right;">
-                    <a class="nav-item nav-link" id="logout" href="/logout" style="margin-left: auto;">Logout</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav">
+            <a class="nav-item nav-link" id="home" href="/">Home</a>
+
+            {% if current_user.is_authenticated %}
+                <li class="nav-item dropdown" style="float: right;">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ user.name }}</a>
+                    <div class="dropdown-menu">
+                        {% if user.is_customer %}
+                            <a class="dropdown-item" href="/customer/dashboard">Dashboard</a>
+                            <a class="dropdown-item" href="/customer/orders">Orders</a>
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                        {% else %}
+                            <a class="dropdown-item" href="/restaurant/dashboard">Dashboard</a>
+                            <a class="dropdown-item" href="/restaurant/menu">Menu</a>
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                        {% endif %}
+                    </div>
                 </li>
-                {% else %}
-                <a class="nav-item nav-link" id="login" href="/login">Login</a>
-                <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
-                {% endif %}
-              </ul>
-            </div>
-        </nav>
+            {% else %}
+                <li style="float: right;">
+                    <a class="nav-item nav-link" id="login" href="/login">Login</a>
+                </li>
+                <li style="float: right;">
+                    <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+                </li>
+            {% endif %}
+          </ul>
+        </div>
+    </nav>
 
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
@@ -68,21 +99,7 @@
         {% endblock %}
         </div>
 
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"
-        ></script>
+
 
     </body>
 
