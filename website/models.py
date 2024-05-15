@@ -29,7 +29,7 @@ class Customer(BaseUser):
 
     orders = relationship('Order', backref='customer', lazy='dynamic')  # One-to-many relationship with Order
 
-    def __init__(self, email, password, name, address, membership):
+    def __init__(self, email, password, name, address, membership=False):
         super().__init__(email=email, password=password, name=name, address=address)  # Call parent constructor
         self.membership = membership
 
