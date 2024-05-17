@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Order History</h2>
+      <style>
+          table {
+          width: 100%; /* Ensure the table takes up full width */
+          table-layout: fixed; /* Distribute column width evenly */
+            }
+
+            th, td {
+                padding: 10px; /* Add padding around table cells */
+                text-align: left; /* Align text to the left */
+            }
+
+            th {
+                background-color: #f0f0f0; /* Add a background color to headers */
+            }
+
+      </style>
+    {% if orders %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Restaurant</th>
+                    <th>Date</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.restaurant.name }}</td>
+                        <td>{{ order.created_at.strftime('%Y-%m-%d %H:%M') }}</td> 
+                        <td>${{ order.total_price }}</td>
+                        <td>{{ order.status }}</td>
+                        <td>
+                            <a href="{{ url_for('views.view_order', order_id=order.id) }}" class="btn btn-info btn-sm">View Details</a>  
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>You haven't placed any orders yet.</p>
+    {% endif %}
+
+{% endblock %}

@@ -25,13 +25,16 @@ class Customer(BaseUser):
     __tablename__ = 'customers'
     __mapper_args__ = {'polymorphic_identity': 'customer'}
 
-    membership = Column(Boolean, default=False)
+    membership = db.Column(db.Boolean, default=False)
+    membership_type = db.Column(db.String(50), nullable=True)
 
     orders = relationship('Order', backref='customer', lazy='dynamic')  # One-to-many relationship with Order
 
-    def __init__(self, email, password, name, address, membership):
-        super().__init__(email=email, password=password, name=name, address=address)  # Call parent constructor
+    def __init__(self, email, password, name, address, membership=False, membership_type=None):
+        super().__init__(email=email, password=password, name=name, address=address, type='customer')  # Call parent
+        # constructor
         self.membership = membership
+        self.membership_type = membership_type
 
 
 class Restaurant(BaseUser):
@@ -45,8 +48,8 @@ class Restaurant(BaseUser):
                               lazy='dynamic')  # One-to-many relationship with MenuItem
     orders = relationship('Order', backref='restaurant', lazy='dynamic')  # One-to-many relationship with Order
 
-    def __init__(self, email, password, name, category, address):
-        super().__init__(email=email, password=password, name=name)  # Call parent constructor
+    def __init__(self, email, password, name, category, address, type):
+        super().__init__(email=email, password=password, name=name, type='restaurant')  # Call parent constructor
         self.category = category
         self.address = address
 
@@ -75,6 +78,8 @@ class OrderItem(db.Model):
     menu_item_id = Column(Integer, ForeignKey('menu_items.id'))
     quantity = Column(Integer, nullable=False)
 
+    menu_item = db.relationship('MenuItem', backref='order_items')
+
     def __init__(self, order_id, menu_item_id, quantity):
         self.order_id = order_id
         self.menu_item_id = menu_item_id
@@ -93,10 +98,10 @@ class Order(db.Model):
     status = Column(String(64), nullable=False)  # e.g., "Pending", "Accepted", "Rejected", "Completed"
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)  # Timestamp for order creation
 
-    def __init__(self, customer_id, restaurant_id, items, total_price, service_option):
+    def __init__(self, customer_id, restaurant_id, items, total_price, service_option, status):
         self.customer_id = customer_id
         self.restaurant_id = restaurant_id
         self.items = items  # List of OrderItem objects
         self.total_price = total_price
         self.service_option = service_option
-        self.status = "Pending"  # Set initial status to pending
+        self.status = status # Set initial status to pending

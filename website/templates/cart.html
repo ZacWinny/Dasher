@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Cart</h2>
+    <style>
+          table {
+          width: 100%; /* Ensure the table takes up full width */
+          table-layout: fixed; /* Distribute column width evenly */
+            }
+
+            th, td {
+                padding: 10px; /* Add padding around table cells */
+                text-align: left; /* Align text to the left */
+            }
+
+            th {
+                background-color: #f0f0f0; /* Add a background color to headers */
+            }
+
+      </style>
+
+    {% if cart_items %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>  
+                </tr>
+            </thead>
+            <tbody>
+                {% for item, quantity, item_price in cart_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ quantity }}</td>
+                        <td>${{ item_price }}</td>
+                        <td>
+                            <form method="POST" action="{{ url_for('views.remove_from_cart', menu_item_id=item.id) }}">
+                                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                   <td>Total: ${{ total_price | round(2) | safe }}</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <a href="{{ url_for('views.checkout') }}" class="btn btn-success">Proceed to Checkout</a>  {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+
+{% endblock %}

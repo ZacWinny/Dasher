@@ -1,5 +1,7 @@
 import random
 from faker import Faker
+from werkzeug.security import generate_password_hash
+
 from main import app
 from website import db
 from website.models import Restaurant, Customer, OrderItem, MenuItem, Order  # Adjust your import path
@@ -135,6 +137,7 @@ def generate_restaurants(num_restaurants):
             name=name,
             category=category,
             address=fake.address(),
+            type='restaurant'
         )
         db.session.add(restaurant)
     db.session.commit()
@@ -144,10 +147,11 @@ def generate_customers(num_customers):
     for _ in range(num_customers):
         customer = Customer(
             email=fake.email(),
-            password=fake.password(),
+            password=generate_password_hash(fake.password(), method='pbkdf2:sha256'),  # Hash the password
             name=fake.name(),
             address=fake.address(),
-            membership=random.choice([True, False])
+            membership=random.choice([True, False]),
+            membership_type=random.choice(['monthly', 'annual']) if random.choice([True]) else None,
         )
         db.session.add(customer)
     db.session.commit()
@@ -188,6 +192,7 @@ def generate_menu_items(num_items_per_restaurant):
 def generate_orders(num_orders):
     customers = Customer.query.all()
     restaurants = Restaurant.query.all()
+    status_options = ['Pending', 'Complete', 'Cancelled']
     service_options = ["Membership", "Pay-on-Demand"]
 
     for _ in range(num_orders):
@@ -207,7 +212,8 @@ def generate_orders(num_orders):
             restaurant_id=restaurant.id,
             items=order_items,
             total_price=total_price,
-            service_option=random.choice(service_options)
+            service_option=random.choice(service_options),
+            status=random.choice(status_options)
         )
         db.session.add(order)
     db.session.commit()

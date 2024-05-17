@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>Welcome, {{ current_user.name }}!</h2>
+
+    <h3>Your Recent Orders</h3>
+    <ul>
+        {% for order in recent_orders %}
+            <li>
+                Order #{{ order.id }} from {{ order.restaurant.name }}
+                ({{ order.created_at.strftime('%Y-%m-%d %H:%M') }}) - {{ order.status }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h3>Account Details</h3>
+    <p>Name: {{ current_user.name }}</p>
+    <p>Email: {{ current_user.email }}</p>
+    <p>Address: {{ current_user.address }}</p>
+    {% if current_user.membership %}
+        <p>Membership Type: {{ current_user.membership_type }}</p>
+    {% else %}
+        <a href="{{ url_for('views.membership_signup') }}" class="btn btn-primary">Sign Up for a Membership</a>
+    {% endif %}
+
+{% endblock %}

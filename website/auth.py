@@ -1,5 +1,5 @@
 from functools import wraps
-from flask import Blueprint, render_template, request, flash, redirect, url_for, abort
+from flask import Blueprint, render_template, request, flash, redirect, url_for, abort, session
 from .models import BaseUser, Customer, Restaurant
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -13,12 +13,21 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
+        user_type = request.form.get('user_type')  # Get the user type
 
-        user = db.session.query(BaseUser).filter_by(email=email).first()
+        if user_type == 'customer':
+            user = Customer.query.filter_by(email=email).first()
+        elif user_type == 'restaurant':
+            user = Restaurant.query.filter_by(email=email).first()
+        else:
+            flash('Invalid user type.', category='error')
+            return redirect(url_for('auth.login'))
         if user:
-            if check_password_hash(user.password, password):
-                flash('Logged in successfully.', category='success')
+            if user and check_password_hash(user.password, password):
                 login_user(user, remember=True)
+                session['user_type'] = 'customer' if isinstance(user,
+                                                                Customer) else 'restaurant'  # Store user type in session
+                flash('Logged in successfully!', category='success')
                 return redirect(url_for('views.home'))
             else:
                 flash('Incorrect password, try again.', category='error')
@@ -89,17 +98,19 @@ def sign_up():
             password_hash = generate_password_hash(password1, method='pbkdf2:sha256')
             if role == 'customer':
                 new_user = Customer(email=email, password=password_hash, name=request.form.get('name'),
-                                    address=request.form.get('address'))
+                                    address=request.form.get('address'))  # Set type
                 db.session.add(new_user)
                 db.session.commit()
             elif role == 'restaurant':
                 new_user = Restaurant(email=email, password=password_hash, name=request.form.get('name'),
-                                      category=request.form.get('category'), address=request.form.get('address'))
+                                      category=request.form.get('category'), address=request.form.get('address'),
+                                      type="restaurant")  # Set type
                 db.session.add(new_user)
                 db.session.commit()
 
             login_user(new_user, remember=True)
+            session['user_type'] = role  # Set user type in session
             flash('Account created.', category='success')
-            return redirect(url_for('views.home'))  # Adjust if you have a different homepage
+            return redirect(url_for('views.home'))
 
     return render_template('sign_up.html')

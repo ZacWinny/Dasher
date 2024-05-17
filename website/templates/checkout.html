@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Checkout</h2>
+<style>
+          table {
+          width: 100%; /* Ensure the table takes up full width */
+          table-layout: fixed; /* Distribute column width evenly */
+            }
+
+            th, td {
+                padding: 10px; /* Add padding around table cells */
+                text-align: left; /* Align text to the left */
+            }
+
+            th {
+                background-color: #f0f0f0; /* Add a background color to headers */
+            }
+
+      </style>
+
+    {% if cart_items %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item, quantity, item_price in cart_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ quantity }}</td>
+                        <td>${{ item_price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>Total: ${{ total_price | round(2) | safe }}</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <form method="POST" action="{{ url_for('views.checkout') }}">
+            <button type="submit" class="btn btn-success">Confirm Order</button>
+        </form>
+
+    {% else %}
+        <p>Your cart is empty. Please add items to your cart.</p>
+    {% endif %}
+{% endblock %}

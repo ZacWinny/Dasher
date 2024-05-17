@@ -22,6 +22,19 @@ def create_app():
     with app.app_context():
         db.create_all()
 
+    with app.app_context():
+        # Update customers
+        customers = Customer.query.all()
+        for customer in customers:
+            customer.type = 'customer'
+        db.session.commit()
+
+        # Update restaurants
+        restaurants = Restaurant.query.all()
+        for restaurant in restaurants:
+            restaurant.type = 'restaurant'
+        db.session.commit()
+
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
@@ -33,4 +46,10 @@ def create_app():
             user = Restaurant.query.get(int(id))  # If not found, check the Restaurant table
         return user
 
+    @app.context_processor
+    def inject_flask_login():
+        return dict(current_user=current_user)
+
     return app
+
+
