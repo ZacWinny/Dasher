@@ -8,4 +8,6 @@ pytest --cov-report xml --cov=./ -n 4
 
 if [  $? -eq 0 ]; then
     python main.py
+else 
+    exit 1
 fi
