@@ -11,5 +11,5 @@ RUN pip install -r requirements.txt
 RUN pip install pytest pytest-xdist pytest-cov
 
 EXPOSE 5000
-
+RUN chmod +x ./docker_script.sh
 CMD ["./docker_script.sh"]
