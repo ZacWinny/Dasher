@@ -77,7 +77,7 @@ def view_order(order_id):
 @customer_required
 def browse_restaurants():
     from flask import request
-    from test_data import food_categories
+    from mock_data import food_categories
     query = Restaurant.query
 
     # --- Filtering ---

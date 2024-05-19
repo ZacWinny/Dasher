@@ -1,15 +1,17 @@
-name: CI
+name: Docker Image CI
 
 on: [push]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
 
-        steps:
-        - name: checkout push
-          uses: actions/checkout@v2
-        
-        - name: Build Docker image
-          run: docker build -t my-image .
- 
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+    - name: Run the Docker container
+      run: docker run --rm my-image-name:$(date +%s)
