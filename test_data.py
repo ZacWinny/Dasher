@@ -4,7 +4,8 @@ from werkzeug.security import generate_password_hash
 
 from main import app
 from website import db
-from website.models import Restaurant, Customer, OrderItem, MenuItem, Order  # Adjust your import path
+from website.models import Restaurant, Customer, OrderItem, MenuItem, Order, \
+    generate_restaurant_id, Review  # Adjust your import path
 
 fake = Faker('en_AU')
 
@@ -46,7 +47,7 @@ food_categories = {
     },
     "Mexican": {
         "Tacos": "images/mexican/tacos.jpg",
-        "Burrito": "images/mexican/burritos.jpg",
+        "Burrito": "images/mexican/burrito.jpg",
         "Enchilada": "images/mexican/enchiladas.jpg",
         "Quesadillas": "images/mexican/quesadillas.jpg",
         "Nachos": "images/mexican/nachos.jpg",
@@ -133,12 +134,12 @@ def generate_restaurants(num_restaurants):
 
         restaurant = Restaurant(
             email=fake.email(),
-            password=fake.password(),
+            password=generate_password_hash(fake.password(), method='pbkdf2:sha256'),
             name=name,
             category=category,
             address=fake.address(),
-            type='restaurant'
         )
+        restaurant.restaurant_id = generate_restaurant_id()
         db.session.add(restaurant)
     db.session.commit()
 
@@ -182,7 +183,7 @@ def generate_menu_items(num_items_per_restaurant):
                                                                                                                  12.0),
                 2)
 
-            menu_item = MenuItem(name=item_name, description=description, price=price, restaurant_id=restaurant.id,
+            menu_item = MenuItem(name=item_name, description=description, price=price, restaurant_id=restaurant.restaurant_id,
                                  image_path=image_path)  # Use image_path from dictionary
             db.session.add(menu_item)
 
@@ -198,9 +199,10 @@ def generate_orders(num_orders):
     for _ in range(num_orders):
         customer = random.choice(customers)
         restaurant = random.choice(restaurants)
-        menu_items = random.sample(restaurant.menu_items.all(), random.randint(1, 5))
+        menu_items = list(restaurant.menu_items)  # Convert InstrumentedList to list
+        selected_items = random.sample(menu_items, random.randint(1, 5))
         order_items = [OrderItem(order_id=None, menu_item_id=item.id, quantity=random.randint(1, 3)) for item in
-                       menu_items]
+                       selected_items]
 
         menu_item_ids = [item.menu_item_id for item in order_items]
         menu_items = MenuItem.query.filter(MenuItem.id.in_(menu_item_ids)).all()
@@ -208,14 +210,21 @@ def generate_orders(num_orders):
         total_price = sum([item.quantity * menu_item_dict[item.menu_item_id].price for item in order_items])
 
         order = Order(
-            customer_id=customer.id,
-            restaurant_id=restaurant.id,
+            customer_id=customer.customer_id,
+            restaurant_id=restaurant.restaurant_id,
             items=order_items,
             total_price=total_price,
             service_option=random.choice(service_options),
             status=random.choice(status_options)
         )
         db.session.add(order)
+        db.session.flush()
+        if order.status == 'Complete':  # Make sure the order is complete
+            review = Review(
+                order_id=order.id,
+                rating=random.randint(1, 5),
+            )
+            db.session.add(review)
     db.session.commit()
 
 

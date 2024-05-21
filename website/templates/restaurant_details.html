@@ -1,35 +1,67 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <h2>{{ restaurant.name }}</h2>
-    <p>Category: {{ restaurant.category }}</p>
-    <p>Address: {{ restaurant.address }}</p>
-
-    <h3>Menu</h3>
 
 <style>
     .menu-item-image {
         width: 100%;
-        height: 200px; /* Adjust as needed */
+        height: 150px; /* Adjust as needed */
         object-fit: cover;
     }
+    .row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Stack card content vertically */
+    height: 100%;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretch content to fill the card */
+}
+
+    .card-img-top {
+  height: 200px;     /* Set a maximum height for the image */
+  width: 100%;       /* Make the image responsive to its container */
+  object-fit: cover;  /* Maintain aspect ratio and cover the container */
+}
+
 </style>
 
-    <div class="row">
-        {% for item in menu_items %}
+{% block content %}
+    <h2>{{ restaurant.name }}</h2>
+    <p>Category: {{ restaurant.category }}</p>
+    <p>Address: {{ restaurant.address }}</p>
+{% if average_rating %}
+    <p>Average Rating: {{ average_rating | round(1) }} / 5</p>
+{% else %}
+    <p>No ratings yet.</p>
+
+{% endif %}
+
+    <h3>Menu</h3>
+
+   <div class="row">
+    {% for item in menu_items %}
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="{{ url_for('static', filename=item.image_path) }}" alt="{{ item.name }} image" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">{{ item.name }}</h5>
-                    <p class="card-text">${{ item.price }}</p>
-                    <form method="POST" action="{{ url_for('views.add_to_cart', menu_item_id=item.id) }}">
-                        <button type="submit" class="btn btn-primary">Add to Cart</button>
-                    </form>
+                <div class="card-content"> <img src="{{ url_for('static', filename=item.image_path) }}" alt="{{ item.name }} image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">${{ item.price | round(2) }}</p>
+                        <form method="POST" action="{{ url_for('views.add_to_cart', menu_item_id=item.id) }}">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        {% endfor %}
-    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

@@ -35,7 +35,7 @@
     </head>
 
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d65454">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff0000">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
         <span class="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@
                 <a class="dropdown-item" href="{{ url_for('views.customer_orders') }}">Orders</a>
             {% elif current_user.type == 'restaurant' %}
                 <a class="dropdown-item" href="{{ url_for('views.restaurant_dashboard') }}">Dashboard</a>
-                <a class="dropdown-item" href="{{ url_for('views.restaurant_menu') }}">Menu</a>
+                <a class="dropdown-item" href="{{ url_for('views.restaurant_menu') }}">My Menu</a>
             {% endif %}
             <a class="dropdown-item" href="/logout">Logout</a>
         </div>

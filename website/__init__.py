@@ -1,10 +1,16 @@
+import os
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, current_user
+from flask_socketio import SocketIO
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
 from .models import BaseUser, Customer, Restaurant, MenuItem, OrderItem, Order
+
+global latest_restaurant_id
+latest_restaurant_id = 98
 
 
 def create_app():
@@ -19,21 +25,14 @@ def create_app():
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
 
+    UPLOAD_FOLDER = 'website/static/images'  # Relative path within the project directory
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
     with app.app_context():
         db.create_all()
 
-    with app.app_context():
-        # Update customers
-        customers = Customer.query.all()
-        for customer in customers:
-            customer.type = 'customer'
-        db.session.commit()
-
-        # Update restaurants
-        restaurants = Restaurant.query.all()
-        for restaurant in restaurants:
-            restaurant.type = 'restaurant'
-        db.session.commit()
+    if not os.path.exists(app.config['UPLOAD_FOLDER']):
+        os.makedirs(app.config['UPLOAD_FOLDER'])
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
@@ -50,6 +49,6 @@ def create_app():
     def inject_flask_login():
         return dict(current_user=current_user)
 
+    socketio = SocketIO(app)
+
     return app
-
-

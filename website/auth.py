@@ -1,11 +1,16 @@
 from functools import wraps
 from flask import Blueprint, render_template, request, flash, redirect, url_for, abort, session
-from .models import BaseUser, Customer, Restaurant
-from . import db
+from .models import BaseUser, Customer, Restaurant, generate_restaurant_id
+from . import db, latest_restaurant_id
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user, current_user
 
 auth = Blueprint('auth', __name__)
+
+
+def find_user_by_email(email):
+    """Retrieves the user object (customer or restaurant) based on email."""
+    return Customer.query.filter_by(email=email).first() or Restaurant.query.filter_by(email=email).first()
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -13,35 +18,50 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        user_type = request.form.get('user_type')  # Get the user type
+        user_type = request.form.get('user_type')
 
         if user_type == 'customer':
             user = Customer.query.filter_by(email=email).first()
         elif user_type == 'restaurant':
             user = Restaurant.query.filter_by(email=email).first()
         else:
+            # Handle invalid user type (optional)
             flash('Invalid user type.', category='error')
-            return redirect(url_for('auth.login'))
-        if user:
-            if user and check_password_hash(user.password, password):
-                login_user(user, remember=True)
-                session['user_type'] = 'customer' if isinstance(user,
-                                                                Customer) else 'restaurant'  # Store user type in session
-                flash('Logged in successfully!', category='success')
-                return redirect(url_for('views.home'))
-            else:
-                flash('Incorrect password, try again.', category='error')
-        else:
-            flash('Email does not exist.', category='error')
+            return render_template("login.html")
 
-    return render_template("login.html", user=current_user)
+        if user and check_password_hash(user.password, password):
+            # Use nested if/elif to set user_id based on type
+            if user_type == 'customer':
+                user_id = user.customer_id
+            elif user_type == 'restaurant':
+                user_id = user.restaurant_id
+            else:
+                # Shouldn't reach here, but handle unexpected case (optional)
+                user_id = None
+
+            login_user(user, remember=True)# Pass user ID instead of user object
+            session['user_type'] = user_type
+            flash('Logged in successfully!', category='success')
+
+            # Redirect based on user type
+            if user_type == 'customer':
+                return redirect(url_for('views.home'))
+            elif user_type == 'restaurant':
+                return redirect(url_for('views.restaurant_dashboard'))
+        else:
+            flash('Incorrect email or password.', category='error')
+            return render_template("login.html")
+
+    # Render login page for GET requests
+    return render_template("login.html", user=None)
+
 
 
 def customer_required(func):
     @wraps(func)
     def decorated_view(*args, **kwargs):
         if not current_user.is_authenticated or not isinstance(current_user, Customer):
-            abort(403)  # Forbidden access
+            abort(403)
         return func(*args, **kwargs)
 
     return decorated_view
@@ -76,6 +96,8 @@ def email_exists(email):
     return False
 
 
+
+
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
@@ -103,8 +125,10 @@ def sign_up():
                 db.session.commit()
             elif role == 'restaurant':
                 new_user = Restaurant(email=email, password=password_hash, name=request.form.get('name'),
-                                      category=request.form.get('category'), address=request.form.get('address'),
-                                      type="restaurant")  # Set type
+                                      category=request.form.get('category'), address=request.form.get('address'), )  # Set type
+                latest_restaurant_id = 99
+                new_user.restaurant_id = latest_restaurant_id + 1
+                latest_restaurant_id += 1
                 db.session.add(new_user)
                 db.session.commit()
 
