@@ -25,7 +25,7 @@ def login():
         elif user_type == 'restaurant':
             user = Restaurant.query.filter_by(email=email).first()
         else:
-            # Handle invalid user type (optional)
+            # Handle invalid user type
             flash('Invalid user type.', category='error')
             return render_template("login.html")
 
@@ -36,7 +36,7 @@ def login():
             elif user_type == 'restaurant':
                 user_id = user.restaurant_id
             else:
-                # Shouldn't reach here, but handle unexpected case (optional)
+                # Shouldn't reach here, but handle unexpected case
                 user_id = None
 
             login_user(user, remember=True)# Pass user ID instead of user object

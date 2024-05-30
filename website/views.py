@@ -329,7 +329,7 @@ def checkout():
                 flash('Your cart is empty.', category='error')
                 return redirect(url_for('views.view_cart'))
 
-            # 3. Create and store the order (assuming no payment for now)
+            # 3. Create and store the order
             try:
                 # Create order items first
                 order_items = []
@@ -393,7 +393,7 @@ def checkout():
 def submit_feedback(order_id):
     order = Order.query.get_or_404(order_id)
 
-    # Authorization check (ensure the order belongs to the current user)
+    # Authoristion check (ensure the order belongs to the current user)
     if order.customer_id != current_user.customer_id:
         abort(403)  # Forbidden access
 
@@ -446,13 +446,13 @@ def add_menu_item():
         price = request.form.get('price')
         image = request.files.get('image')
 
-        # 1. Form Validation (Add robust validation as needed)
+        # 1. Form Validation
         if not name or not description or not price:
             flash('All fields are required.', category='error')
         elif not image:
             flash('Please select an image file.', category='error')
         else:
-            # 2. Image Handling (If applicable)
+            # 2. Image Handling
             filename = secure_filename(image.filename)  # Use secure_filename for security
             image_path = os.path.join("images/", filename)
             image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
@@ -489,12 +489,12 @@ def edit_menu_item(item_id):
         price = request.form.get('price')
         image = request.files.get('image')
 
-        # 1. Form Validation (Add robust validation as needed)
+        # 1. Form Validation
         if not name or not description or not price:
             flash('All fields are required.', category='error')
             return render_template('edit_menu_item.html', menu_item=menu_item)  # Re-render form with errors
 
-        # 2. Image Handling (If applicable)
+        # 2. Image Handling
         if image and image.filename != '':  # Check if a new image was uploaded
             filename = secure_filename(image.filename)
             image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -557,14 +557,12 @@ def edit_restaurant_profile():
         address = request.form.get('address')
         phone_number = request.form.get('phone_number')
         description = request.form.get('description')
-        # Add validation here if needed (ensure fields are not empty, etc.)
 
         restaurant.name = name
         restaurant.category = category
         restaurant.address = address
-        restaurant.phone_number = phone_number  # Assuming you have a phone_number column in your model
-        restaurant.description = description  # Assuming you have a description column
-
+        restaurant.phone_number = phone_number
+        restaurant.description = description
         db.session.commit()
 
         flash('Profile updated successfully!', 'success')
@@ -592,7 +590,7 @@ def restaurant_orders():
 def view_order_restaurant(order_id):
     order = Order.query.get_or_404(order_id)
 
-    # Authorization check (ensure the order belongs to the restaurant)
+    # Authorisation check (ensure the order belongs to the restaurant)
     if order.restaurant_id != current_user.restaurant_id:
         abort(403)  # Forbidden access
 
@@ -612,7 +610,7 @@ def view_order_restaurant(order_id):
 def accept_order(order_id):
     order = Order.query.get_or_404(order_id)
 
-    # Authorization check (ensure the restaurant owns the order)
+    # Authorisation check (ensure the restaurant owns the order)
     if order.restaurant_id != current_user.restaurant_id:
         abort(403)  # Forbidden access
 
@@ -628,7 +626,7 @@ def accept_order(order_id):
 def reject_order(order_id):
     order = Order.query.get_or_404(order_id)
 
-    # Authorization check (ensure the restaurant owns the order)
+    # Authorisation check (ensure the restaurant owns the order)
     if order.restaurant_id != current_user.restaurant_id:
         abort(403)  # Forbidden access
 
@@ -644,7 +642,7 @@ def reject_order(order_id):
 def update_order_status(order_id):
     order = Order.query.get_or_404(order_id)
 
-    # Authorization check (ensure the restaurant owns the order)
+    # Authorisation check (ensure the restaurant owns the order)
     if order.restaurant_id != current_user.restaurant_id:
         abort(403)  # Forbidden access
 

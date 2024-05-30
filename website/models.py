@@ -50,7 +50,7 @@ class Customer(BaseUser, CustomerMixin):
 def generate_restaurant_id():
     latest_restaurant_id = 100  # Access the global variable
     latest_restaurant_id += 1
-    # ... (rest of the ID generation logic)
+
 
 
 class Restaurant(BaseUser, RestaurantMixin):
