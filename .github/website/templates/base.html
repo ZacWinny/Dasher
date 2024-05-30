@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset ="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+         <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+         />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            crossorigin="anonymous"
+        />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9JuPHAk6839_VkIKpd8TWAPiVL48G9NE&libraries=places" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+
+
+        <title>{% block title %}Home{% endblock %}</title>
+    </head>
+
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff0000">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav">
+            <a class="nav-item nav-link" id="home" href="/">Home</a>
+
+{% if current_user.is_authenticated %}
+
+    <li class="nav-item dropdown" style="float: right;">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{{ current_user.name }}</a>
+        <div class="dropdown-menu">
+            {% if current_user.type == 'customer' %}
+                <a class="dropdown-item" href="{{ url_for('views.customer_dashboard') }}">Dashboard</a>
+                <a class="dropdown-item" href="{{ url_for('views.customer_orders') }}">Orders</a>
+            {% elif current_user.type == 'restaurant' %}
+                <a class="dropdown-item" href="{{ url_for('views.restaurant_dashboard') }}">Dashboard</a>
+                <a class="dropdown-item" href="{{ url_for('views.restaurant_menu') }}">My Menu</a>
+            {% endif %}
+            <a class="dropdown-item" href="/logout">Logout</a>
+        </div>
+    </li>
+              {% if current_user.type == 'customer' %}
+              <a class="nav-item nav-link" id="browseRestaurants" href="{{ url_for('views.browse_restaurants') }}">Restaurants</a>
+              <a class="nav-item nav-link" href="{{ url_for('views.view_cart') }}">Cart</a>
+              {% endif %}
+{% else %}
+    <li style="float: right;">
+        <a class="nav-item nav-link" id="login" href="/login">Login</a>
+    </li>
+    <li style="float: right;">
+        <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+    </li>
+{% endif %}
+          </ul>
+        </div>
+    </nav>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            {% if category == 'error' %}
+            <div class="alert alert-danger alert-dismissable fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% else %}
+            <div class="alert alert-success alert-dismissable fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+
+        <div class="container" >
+        {% block content %}
+        {% endblock %}
+        </div>
+
+
+
+    </body>
+
+</html>

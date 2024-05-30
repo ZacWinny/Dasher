@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .card-img-top {
+  height: 200px;     /* Set a maximum height for the image */
+  width: 100%;       /* Make the image responsive to its container */
+  object-fit: cover;  /* Maintain aspect ratio and cover the container */
+}
+</style>
+<h2>Browse Restaurants</h2>
+
+<form method="GET" action="{{ url_for('views.browse_restaurants') }}">
+    <div class="form-group">
+        <label for="category">Category:</label>
+        <select name="category" class="form-control">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+    <option value="{{ category }}" {% if category == selected_category %}selected{% endif %}>{{ category }}</option>
+{% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="search">Search:</label>
+        <input type="text" class="form-control" id="search" name="search" placeholder="Search by name or keyword">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+<div class="row">
+    {% for restaurant in restaurants %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename=restaurant.menu_items[0].image_path) }}" alt="{{ restaurant.name }} image" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ restaurant.name }}</h5>
+                    <p class="card-text">Category: {{ restaurant.category }}</p>
+                    <p class="card-text">Rating: {{ restaurant.average_rating }}/5</p>
+                    <a href="{{ url_for('views.view_restaurant', restaurant_id=restaurant.restaurant_id) }}" class="btn btn-primary">View Menu</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

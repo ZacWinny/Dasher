@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Order Details (Order #{{ order.id }})</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Customer Information</h5>
+        <p>Name: {{ order.customer.name }}</p>
+        <p>Email: {{ order.customer.email }}</p>
+        <p>Address: {{ order.customer.address }}</p>
+        <p>Membership Type: {{ order.customer.membership_type }}</p>
+    </div>
+</div>
+<div class="card mt-3">
+    <div class="card-body">
+        <h5 class="card-title">Order Details</h5>
+        <p>Placed At: {{ order.created_at.strftime('%Y-%m-%d %H:%M') }}</p>
+        <p>Total Price: ${{ order.total_price | round(2) }}</p>
+        <p>Service Option: {{ order.service_option }}</p>
+        <p>Status: {{ order.status }}</p>
+
+        {% if order.reviews %}  <h5>Feedback</h5>
+            {% for review in order.reviews %}  <p>Rating: {{ review.rating }}</p>
+                <p>Comments: {{ review.comments }}</p>
+                <hr>  {% endfor %}
+        {% else %}
+        <p>No feedback submitted for this order.</p>
+{       {%  endif %}
+    </div>
+</div>
+<div class="card mt-3">
+    <div class="card-body">
+        <h5 class="card-title">Items Ordered</h5>
+        <ul>
+            {% for order_item in order_items %}
+                <li>{{ order_item.menu_item.name }} x {{ order_item.quantity }} 
+                    (${{ order_item.menu_item.price * order_item.quantity }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="card mt-3">
+    <div class="card-body">
+        <h5 class="card-title">Status Update</h5>
+        <form method="POST" action="{{ url_for('views.update_order_status', order_id=order.id) }}">
+            <div class="form-group">
+                <select name="new_status" class="form-control" required>
+                    <option value="Pending" {% if order.status == 'Pending' %}selected{% endif %}>Pending</option>
+                    <option value="Accepted" {% if order.status == 'Accepted' %}selected{% endif %}>Accepted</option>
+                    <option value="In Preparation" {% if order.status == 'In Preparation' %}selected{% endif %}>In Preparation</option>
+                    <option value="Out for Delivery" {% if order.status == 'Out for Delivery' %}selected{% endif %}>Out for Delivery</option>
+                    <option value="Delivered" {% if order.status == 'Delivered' %}selected{% endif %}>Delivered</option>
+                    <option value="Cancelled" {% if order.status == 'Cancelled' %}selected{% endif %}>Cancelled</option> 
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Status</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

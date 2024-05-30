@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container py-3">
+        <h1>Add Menu Item</h1>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message, category in messages %}
+                        <li class="flash {{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form method="post" enctype="multipart/form-data" class="row">
+            <div class="col-md-6 form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required class="form-control">
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" required class="form-control" rows="3"></textarea>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="price" step="0.01" required class="form-control">
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="image">Image:</label>
+                <input type="file" name="image" id="image" accept="image/*" class="form-control">
+            </div>
+            <div class="col-12 py-3">
+                <button type="submit" class="btn btn-primary">Add Menu Item</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

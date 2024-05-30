@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container py-3">
+        <h1>Edit Menu Item</h1>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message, category in messages %}
+                        <li class="flash {{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        {% if menu_item %}
+            <form method="post" enctype="multipart/form-data" class="row">
+                <div class="col-md-6 form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="{{ menu_item.name }}" required class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="description" required class="form-control" rows="3">{{ menu_item.description }}</textarea>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" name="price" id="price" step="0.01" value="{{ menu_item.price }}" required class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" name="image" id="image" accept="image/*">  {% if menu_item.image %}
+                        <p>Current Image: {{ menu_item.image }}</p>  {% endif %}
+                </div>
+                <div class="col-12 py-3">
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
+        {% else %}
+            <p>Menu item not found!</p>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Edit Restaurant Profile</h2>
+
+    <form method="POST" action="{{ url_for('views.edit_restaurant_profile') }}">
+        <div class="form-group">
+            <label for="name">Restaurant Name:</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{ restaurant.name }}" required>
+        </div>
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select name="category" class="form-control" required>
+                <option value="">Select Category</option>
+                {% for category in food_categories %}
+                    <option value="{{ category }}" {% if category == restaurant.category %}selected{% endif %}>{{ category }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" name="address" value="{{ restaurant.address }}" required>
+        </div>
+        <div class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" class="form-control" id="phone_number" name="phone_number" value="{{ restaurant.phone_number }}" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required>{{ restaurant.description }}</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Profile</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,1405 @@
+(['C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - CSIT314\\Dasher-main\\main.py'],
+ ['C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - CSIT314\\Dasher-main'],
+ ['flask', 'jinja2'],
+ ['C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+  'CSIT314\\Dasher-main\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks',
+  'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+  'CSIT314\\Dasher-main\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks'],
+ {},
+ [],
+ [],
+ False,
+ {},
+ 0,
+ [],
+ [('static\\images\\american\\bbq_ribs.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\bbq_ribs.jpg',
+   'DATA'),
+  ('static\\images\\american\\caesar_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\caesar_salad.jpg',
+   'DATA'),
+  ('static\\images\\american\\cheeseburger.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\cheeseburger.jpg',
+   'DATA'),
+  ('static\\images\\american\\fried_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\fried_chicken.jpg',
+   'DATA'),
+  ('static\\images\\american\\fries.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\fries.jpg',
+   'DATA'),
+  ('static\\images\\american\\hamburger.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\hamburger.jpg',
+   'DATA'),
+  ('static\\images\\american\\hot_dog.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\hot_dog.jpg',
+   'DATA'),
+  ('static\\images\\american\\mac_and_cheese.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\mac_and_cheese.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\cappuccino.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\cappuccino.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\croissant.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\croissant.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\espresso.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\espresso.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\latte.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\latte.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\muffin.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\muffin.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\pastry.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\pastry.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\salad.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\sandwich.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\sandwich.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\smoothie.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\smoothie.jpg',
+   'DATA'),
+  ('static\\images\\cappuccino.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cappuccino.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\chow_mein.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\chow_mein.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\dim_sum.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\dim_sum.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\egg_roll.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\egg_roll.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\fried_rice.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\fried_rice.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\general_tsos_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\general_tsos_chicken.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\kung_pao_shrimp.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\kung_pao_shrimp.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\peking_duck.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\peking_duck.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\short_soup.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\short_soup.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\sweet_and_sour_pork.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\sweet_and_sour_pork.jpg',
+   'DATA'),
+  ('static\\images\\club\\chicken_parmigiana.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\chicken_parmigiana.jpg',
+   'DATA'),
+  ('static\\images\\club\\chicken_schnitzel.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\chicken_schnitzel.jpg',
+   'DATA'),
+  ('static\\images\\club\\fish_and_chips.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\fish_and_chips.jpg',
+   'DATA'),
+  ('static\\images\\club\\garlic_bread.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\garlic_bread.jpg',
+   'DATA'),
+  ('static\\images\\club\\salt_and_pepper_squid.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\salt_and_pepper_squid.jpg',
+   'DATA'),
+  ('static\\images\\club\\steak_sandwich.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\steak_sandwich.jpg',
+   'DATA'),
+  ('static\\images\\greek\\baklava.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\baklava.jpg',
+   'DATA'),
+  ('static\\images\\greek\\falafel.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\falafel.jpg',
+   'DATA'),
+  ('static\\images\\greek\\greek_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\greek_salad.jpg',
+   'DATA'),
+  ('static\\images\\greek\\hummus.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\hummus.jpg',
+   'DATA'),
+  ('static\\images\\greek\\souvlaki.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\souvlaki.jpg',
+   'DATA'),
+  ('static\\images\\greek\\spanakopita.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\spanakopita.jpg',
+   'DATA'),
+  ('static\\images\\hero_image.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\hero_image.jpg',
+   'DATA'),
+  ('static\\images\\indian\\butter_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\butter_chicken.jpg',
+   'DATA'),
+  ('static\\images\\indian\\chicken_tikka_masala.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\chicken_tikka_masala.jpg',
+   'DATA'),
+  ('static\\images\\indian\\naan_bread.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\naan_bread.jpg',
+   'DATA'),
+  ('static\\images\\indian\\rogan_josh.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\rogan_josh.jpg',
+   'DATA'),
+  ('static\\images\\indian\\samosa.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\samosa.jpg',
+   'DATA'),
+  ('static\\images\\indian\\tandoori_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\tandoori_chicken.jpg',
+   'DATA'),
+  ('static\\images\\italian\\caprese_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\caprese_salad.jpg',
+   'DATA'),
+  ('static\\images\\italian\\lasagna.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\lasagna.jpg',
+   'DATA'),
+  ('static\\images\\italian\\panna_cotta.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\panna_cotta.jpg',
+   'DATA'),
+  ('static\\images\\italian\\pizza_margherita.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\pizza_margherita.jpg',
+   'DATA'),
+  ('static\\images\\italian\\spaghetti_carbonara.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\spaghetti_carbonara.jpg',
+   'DATA'),
+  ('static\\images\\italian\\tiramisu.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\tiramisu.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\donburi.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\donburi.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\miso_soup.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\miso_soup.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\ramen.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\ramen.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\sashimi.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\sashimi.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\sushi.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\sushi.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\tempura.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\tempura.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\baba_ganoush.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\baba_ganoush.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\baba_ghanoush.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\baba_ghanoush.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\baklava.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\baklava.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\falafel.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\falafel.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\fattoush_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\fattoush_salad.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\kafta.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\kafta.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\shawarma.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\shawarma.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\burrito.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\burrito.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\churros.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\churros.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\enchiladas.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\enchiladas.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\nachos.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\nachos.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\quesadillas.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\quesadillas.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\tacos.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\tacos.jpg',
+   'DATA'),
+  ('static\\images\\thai\\green_curry.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\green_curry.jpg',
+   'DATA'),
+  ('static\\images\\thai\\massaman_curry.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\massaman_curry.jpg',
+   'DATA'),
+  ('static\\images\\thai\\pad_see_ew.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\pad_see_ew.jpg',
+   'DATA'),
+  ('static\\images\\thai\\pad_thai.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\pad_thai.jpg',
+   'DATA'),
+  ('static\\images\\thai\\satay.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\satay.jpg',
+   'DATA'),
+  ('static\\images\\thai\\tom_yum_soup.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\tom_yum_soup.jpg',
+   'DATA'),
+  ('templates\\add_menu_item.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\add_menu_item.html',
+   'DATA'),
+  ('templates\\base.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\base.html',
+   'DATA'),
+  ('templates\\browse_restaurants.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\browse_restaurants.html',
+   'DATA'),
+  ('templates\\cart.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\cart.html',
+   'DATA'),
+  ('templates\\checkout.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\checkout.html',
+   'DATA'),
+  ('templates\\customer_dashboard.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\customer_dashboard.html',
+   'DATA'),
+  ('templates\\customer_orders.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\customer_orders.html',
+   'DATA'),
+  ('templates\\edit_menu_item.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\edit_menu_item.html',
+   'DATA'),
+  ('templates\\edit_restaurant_profile.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\edit_restaurant_profile.html',
+   'DATA'),
+  ('templates\\home.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\home.html',
+   'DATA'),
+  ('templates\\login.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\login.html',
+   'DATA'),
+  ('templates\\membership_signup.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\membership_signup.html',
+   'DATA'),
+  ('templates\\order_details.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\order_details.html',
+   'DATA'),
+  ('templates\\restaurant_dashboard.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_dashboard.html',
+   'DATA'),
+  ('templates\\restaurant_details.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_details.html',
+   'DATA'),
+  ('templates\\restaurant_menu.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_menu.html',
+   'DATA'),
+  ('templates\\restaurant_order_details.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_order_details.html',
+   'DATA'),
+  ('templates\\restaurant_orders.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_orders.html',
+   'DATA'),
+  ('templates\\restaurant_reports.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_reports.html',
+   'DATA'),
+  ('templates\\sign_up.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\sign_up.html',
+   'DATA'),
+  ('templates\\submit_feedback.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\submit_feedback.html',
+   'DATA')],
+ '3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit '
+ '(AMD64)]',
+ [('pyi_rth_inspect',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('main',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - CSIT314\\Dasher-main\\main.py',
+   'PYSOURCE')],
+ [('inspect',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\inspect.py',
+   'PYMODULE'),
+  ('importlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\__init__.py',
+   'PYMODULE'),
+  ('typing',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\typing.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib.resources.abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\abc.py',
+   'PYMODULE'),
+  ('importlib.resources',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\__init__.py',
+   'PYMODULE'),
+  ('importlib.resources._legacy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_legacy.py',
+   'PYMODULE'),
+  ('importlib.resources._common',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_common.py',
+   'PYMODULE'),
+  ('importlib.resources._adapters',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_adapters.py',
+   'PYMODULE'),
+  ('tempfile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\tempfile.py',
+   'PYMODULE'),
+  ('random',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\random.py',
+   'PYMODULE'),
+  ('_strptime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\_strptime.py',
+   'PYMODULE'),
+  ('datetime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\datetime.py',
+   'PYMODULE'),
+  ('_pydatetime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\_pydatetime.py',
+   'PYMODULE'),
+  ('calendar',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\calendar.py',
+   'PYMODULE'),
+  ('statistics',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\statistics.py',
+   'PYMODULE'),
+  ('decimal',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\decimal.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('contextvars',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\contextvars.py',
+   'PYMODULE'),
+  ('fractions',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\fractions.py',
+   'PYMODULE'),
+  ('numbers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\numbers.py',
+   'PYMODULE'),
+  ('hashlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\hashlib.py',
+   'PYMODULE'),
+  ('logging',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('pickle',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\pickle.py',
+   'PYMODULE'),
+  ('pprint',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\pprint.py',
+   'PYMODULE'),
+  ('dataclasses',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\dataclasses.py',
+   'PYMODULE'),
+  ('copy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\copy.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('struct',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\struct.py',
+   'PYMODULE'),
+  ('threading',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\threading.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\_threading_local.py',
+   'PYMODULE'),
+  ('string',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\string.py',
+   'PYMODULE'),
+  ('bisect',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\bisect.py',
+   'PYMODULE'),
+  ('shutil',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\shutil.py',
+   'PYMODULE'),
+  ('tarfile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\tarfile.py',
+   'PYMODULE'),
+  ('gzip',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\gzip.py',
+   'PYMODULE'),
+  ('_compression',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\_compression.py',
+   'PYMODULE'),
+  ('lzma',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\lzma.py',
+   'PYMODULE'),
+  ('bz2',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\bz2.py',
+   'PYMODULE'),
+  ('fnmatch',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\fnmatch.py',
+   'PYMODULE'),
+  ('importlib._abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\_abc.py',
+   'PYMODULE'),
+  ('importlib.metadata._itertools',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_itertools.py',
+   'PYMODULE'),
+  ('importlib.metadata._functools',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_functools.py',
+   'PYMODULE'),
+  ('importlib.metadata._collections',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_collections.py',
+   'PYMODULE'),
+  ('importlib.metadata._meta',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_meta.py',
+   'PYMODULE'),
+  ('importlib.metadata._adapters',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_adapters.py',
+   'PYMODULE'),
+  ('importlib.metadata._text',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\metadata\\_text.py',
+   'PYMODULE'),
+  ('email.message',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.policy',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('urllib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.generator',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('base64',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\base64.py',
+   'PYMODULE'),
+  ('getopt',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\getopt.py',
+   'PYMODULE'),
+  ('gettext',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\gettext.py',
+   'PYMODULE'),
+  ('email.charset',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.header',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.errors',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\errors.py',
+   'PYMODULE'),
+  ('email.utils',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\utils.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('ipaddress',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\ipaddress.py',
+   'PYMODULE'),
+  ('socket',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\socket.py',
+   'PYMODULE'),
+  ('selectors',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\selectors.py',
+   'PYMODULE'),
+  ('quopri',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\quopri.py',
+   'PYMODULE'),
+  ('contextlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\contextlib.py',
+   'PYMODULE'),
+  ('textwrap',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\textwrap.py',
+   'PYMODULE'),
+  ('zipfile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\zipfile\\__init__.py',
+   'PYMODULE'),
+  ('zipfile._path',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\zipfile\\_path\\__init__.py',
+   'PYMODULE'),
+  ('zipfile._path.glob',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\zipfile\\_path\\glob.py',
+   'PYMODULE'),
+  ('py_compile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\py_compile.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('pathlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\pathlib.py',
+   'PYMODULE'),
+  ('email',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email.parser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('csv',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\csv.py',
+   'PYMODULE'),
+  ('importlib.readers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\readers.py',
+   'PYMODULE'),
+  ('importlib.resources.readers',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\readers.py',
+   'PYMODULE'),
+  ('importlib.resources._itertools',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\resources\\_itertools.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('argparse',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\argparse.py',
+   'PYMODULE'),
+  ('token',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\token.py',
+   'PYMODULE'),
+  ('tokenize',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\tokenize.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('dis',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\dis.py',
+   'PYMODULE'),
+  ('opcode',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\opcode.py',
+   'PYMODULE'),
+  ('ast',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\ast.py',
+   'PYMODULE'),
+  ('subprocess',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\subprocess.py',
+   'PYMODULE'),
+  ('signal',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\signal.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\_py_abc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\Lib\\stringprep.py',
+   'PYMODULE'),
+  ('website',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\__init__.py',
+   'PYMODULE'),
+  ('website.auth',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\auth.py',
+   'PYMODULE'),
+  ('website.views',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\views.py',
+   'PYMODULE'),
+  ('main',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - CSIT314\\Dasher-main\\main.py',
+   'PYMODULE'),
+  ('test_data',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\test_data.py',
+   'PYMODULE'),
+  ('website.models',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\models.py',
+   'PYMODULE')],
+ [('python312.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\python312.dll',
+   'BINARY'),
+  ('_decimal.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('libcrypto-3.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\ucrtbase.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Users\\zacwi\\AppData\\Local\\Programs\\AdoptOpenJDK\\bin\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY')],
+ [],
+ [],
+ [('static\\images\\american\\bbq_ribs.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\bbq_ribs.jpg',
+   'DATA'),
+  ('static\\images\\american\\caesar_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\caesar_salad.jpg',
+   'DATA'),
+  ('static\\images\\american\\cheeseburger.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\cheeseburger.jpg',
+   'DATA'),
+  ('static\\images\\american\\fried_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\fried_chicken.jpg',
+   'DATA'),
+  ('static\\images\\american\\fries.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\fries.jpg',
+   'DATA'),
+  ('static\\images\\american\\hamburger.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\hamburger.jpg',
+   'DATA'),
+  ('static\\images\\american\\hot_dog.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\hot_dog.jpg',
+   'DATA'),
+  ('static\\images\\american\\mac_and_cheese.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\american\\mac_and_cheese.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\cappuccino.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\cappuccino.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\croissant.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\croissant.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\espresso.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\espresso.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\latte.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\latte.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\muffin.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\muffin.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\pastry.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\pastry.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\salad.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\sandwich.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\sandwich.jpg',
+   'DATA'),
+  ('static\\images\\cafe\\smoothie.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cafe\\smoothie.jpg',
+   'DATA'),
+  ('static\\images\\cappuccino.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\cappuccino.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\chow_mein.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\chow_mein.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\dim_sum.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\dim_sum.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\egg_roll.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\egg_roll.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\fried_rice.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\fried_rice.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\general_tsos_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\general_tsos_chicken.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\kung_pao_shrimp.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\kung_pao_shrimp.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\peking_duck.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\peking_duck.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\short_soup.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\short_soup.jpg',
+   'DATA'),
+  ('static\\images\\chinese\\sweet_and_sour_pork.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\chinese\\sweet_and_sour_pork.jpg',
+   'DATA'),
+  ('static\\images\\club\\chicken_parmigiana.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\chicken_parmigiana.jpg',
+   'DATA'),
+  ('static\\images\\club\\chicken_schnitzel.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\chicken_schnitzel.jpg',
+   'DATA'),
+  ('static\\images\\club\\fish_and_chips.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\fish_and_chips.jpg',
+   'DATA'),
+  ('static\\images\\club\\garlic_bread.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\garlic_bread.jpg',
+   'DATA'),
+  ('static\\images\\club\\salt_and_pepper_squid.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\salt_and_pepper_squid.jpg',
+   'DATA'),
+  ('static\\images\\club\\steak_sandwich.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\club\\steak_sandwich.jpg',
+   'DATA'),
+  ('static\\images\\greek\\baklava.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\baklava.jpg',
+   'DATA'),
+  ('static\\images\\greek\\falafel.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\falafel.jpg',
+   'DATA'),
+  ('static\\images\\greek\\greek_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\greek_salad.jpg',
+   'DATA'),
+  ('static\\images\\greek\\hummus.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\hummus.jpg',
+   'DATA'),
+  ('static\\images\\greek\\souvlaki.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\souvlaki.jpg',
+   'DATA'),
+  ('static\\images\\greek\\spanakopita.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\greek\\spanakopita.jpg',
+   'DATA'),
+  ('static\\images\\hero_image.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\hero_image.jpg',
+   'DATA'),
+  ('static\\images\\indian\\butter_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\butter_chicken.jpg',
+   'DATA'),
+  ('static\\images\\indian\\chicken_tikka_masala.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\chicken_tikka_masala.jpg',
+   'DATA'),
+  ('static\\images\\indian\\naan_bread.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\naan_bread.jpg',
+   'DATA'),
+  ('static\\images\\indian\\rogan_josh.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\rogan_josh.jpg',
+   'DATA'),
+  ('static\\images\\indian\\samosa.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\samosa.jpg',
+   'DATA'),
+  ('static\\images\\indian\\tandoori_chicken.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\indian\\tandoori_chicken.jpg',
+   'DATA'),
+  ('static\\images\\italian\\caprese_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\caprese_salad.jpg',
+   'DATA'),
+  ('static\\images\\italian\\lasagna.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\lasagna.jpg',
+   'DATA'),
+  ('static\\images\\italian\\panna_cotta.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\panna_cotta.jpg',
+   'DATA'),
+  ('static\\images\\italian\\pizza_margherita.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\pizza_margherita.jpg',
+   'DATA'),
+  ('static\\images\\italian\\spaghetti_carbonara.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\spaghetti_carbonara.jpg',
+   'DATA'),
+  ('static\\images\\italian\\tiramisu.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\italian\\tiramisu.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\donburi.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\donburi.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\miso_soup.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\miso_soup.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\ramen.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\ramen.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\sashimi.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\sashimi.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\sushi.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\sushi.jpg',
+   'DATA'),
+  ('static\\images\\japanese\\tempura.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\japanese\\tempura.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\baba_ganoush.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\baba_ganoush.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\baba_ghanoush.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\baba_ghanoush.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\baklava.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\baklava.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\falafel.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\falafel.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\fattoush_salad.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\fattoush_salad.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\kafta.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\kafta.jpg',
+   'DATA'),
+  ('static\\images\\lebanese\\shawarma.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\lebanese\\shawarma.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\burrito.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\burrito.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\churros.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\churros.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\enchiladas.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\enchiladas.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\nachos.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\nachos.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\quesadillas.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\quesadillas.jpg',
+   'DATA'),
+  ('static\\images\\mexican\\tacos.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\mexican\\tacos.jpg',
+   'DATA'),
+  ('static\\images\\thai\\green_curry.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\green_curry.jpg',
+   'DATA'),
+  ('static\\images\\thai\\massaman_curry.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\massaman_curry.jpg',
+   'DATA'),
+  ('static\\images\\thai\\pad_see_ew.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\pad_see_ew.jpg',
+   'DATA'),
+  ('static\\images\\thai\\pad_thai.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\pad_thai.jpg',
+   'DATA'),
+  ('static\\images\\thai\\satay.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\satay.jpg',
+   'DATA'),
+  ('static\\images\\thai\\tom_yum_soup.jpg',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\static\\images\\thai\\tom_yum_soup.jpg',
+   'DATA'),
+  ('templates\\add_menu_item.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\add_menu_item.html',
+   'DATA'),
+  ('templates\\base.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\base.html',
+   'DATA'),
+  ('templates\\browse_restaurants.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\browse_restaurants.html',
+   'DATA'),
+  ('templates\\cart.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\cart.html',
+   'DATA'),
+  ('templates\\checkout.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\checkout.html',
+   'DATA'),
+  ('templates\\customer_dashboard.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\customer_dashboard.html',
+   'DATA'),
+  ('templates\\customer_orders.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\customer_orders.html',
+   'DATA'),
+  ('templates\\edit_menu_item.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\edit_menu_item.html',
+   'DATA'),
+  ('templates\\edit_restaurant_profile.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\edit_restaurant_profile.html',
+   'DATA'),
+  ('templates\\home.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\home.html',
+   'DATA'),
+  ('templates\\login.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\login.html',
+   'DATA'),
+  ('templates\\membership_signup.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\membership_signup.html',
+   'DATA'),
+  ('templates\\order_details.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\order_details.html',
+   'DATA'),
+  ('templates\\restaurant_dashboard.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_dashboard.html',
+   'DATA'),
+  ('templates\\restaurant_details.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_details.html',
+   'DATA'),
+  ('templates\\restaurant_menu.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_menu.html',
+   'DATA'),
+  ('templates\\restaurant_order_details.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_order_details.html',
+   'DATA'),
+  ('templates\\restaurant_orders.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_orders.html',
+   'DATA'),
+  ('templates\\restaurant_reports.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\restaurant_reports.html',
+   'DATA'),
+  ('templates\\sign_up.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\sign_up.html',
+   'DATA'),
+  ('templates\\submit_feedback.html',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\website\\templates\\submit_feedback.html',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\zacwi\\Desktop\\Uni folders\\1 - '
+   'CSIT314\\Dasher-main\\build\\main\\base_library.zip',
+   'DATA')])

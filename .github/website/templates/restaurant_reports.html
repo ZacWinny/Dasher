@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Revenue Report</h2>
+
+     <form method="GET" action="{{ url_for('views.restaurant_reports') }}">
+        <div class="form-group">
+            <label for="start_date">Start Date:</label>
+            <input type="date" class="form-control" id="start_date" name="start_date"
+                   value="{{ start_date.strftime('%Y-%m-%d') if start_date else '' }}">
+        </div>
+        <div class="form-group">
+            <label for="end_date">End Date:</label>
+            <input type="date" class="form-control" id="end_date" name="end_date"
+                   value="{{ end_date.strftime('%Y-%m-%d') if end_date else '' }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Report</button>
+    </form>
+
+    <form method="GET" action="{{ url_for('views.restaurant_reports') }}">
+        </form>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            <h3>Total Revenue: ${{ total_revenue | round(2) }}</h3>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            <h3>Revenue by Item</h3>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item, revenue in revenue_by_item %}
+                        <tr>
+                            <td>{{ item }}</td>  <td>${{ revenue | round(2) }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

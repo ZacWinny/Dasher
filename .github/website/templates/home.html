@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .hero-section {
+  text-align: center; /* Center the content horizontally */
+  padding: 50px 0;    /* Add some padding for spacing */
+  background-color: #f5f5f5; /* Light background color */
+}
+
+.hero-section h1 {
+  width: 100%;       /* Make the title span full width */
+  font-size: 2rem;    /* Adjust font size as needed */
+}
+
+    .featured-restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust 250px as a minimum width if needed */
+  gap: 20px; /* Optional: add spacing between grid items */
+}
+
+.restaurant-item {
+  /* Ensure images maintain aspect ratio and cover the space */
+  overflow: hidden;
+}
+
+.restaurant-item img {
+  width: 100%;
+  height: 200px;  /* Set a fixed height (adjust as needed) */
+  object-fit: cover; /* Cover the container, cropping the image if necessary */
+}
+</style>
+
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Order from your favourite local restaurants</h1>
+                <p>Delicious food delivered right to your doorstep.  Fast, convenient, and affordable.</p>
+                <a href="{{ url_for('views.browse_restaurants') }}" class="btn btn-primary btn-lg">Browse Restaurants</a>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/hero_image.jpg') }}" alt="Delicious Food Delivery" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="featured-restaurants section-padding">
+    <div class="container">
+        <h2 class="text-center mb-4">Featured Restaurants</h2>
+
+        <div class="row">
+    {% for restaurant in featured_restaurants %}
+        <div class="col-md-4">
+            </div>
+    {% endfor %}
+</div>
+
+        <div class="featured-restaurants-grid">
+            {% for restaurant in featured_restaurants %}
+            <div class="restaurant-item"> <div class="card">
+                    <img src="{{ url_for('static', filename=restaurant.menu_items[0].image_path) }}" alt="{{ restaurant.name }} image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ restaurant.name }}</h5>
+                        <p class="card-text">{{ restaurant.category }}</p>
+                        <div class="rating">
+                            {% set rating = restaurant.average_rating %}
+                            {% for i in range(5) %}
+                                <span class="fa fa-star {% if i < rating %}checked{% endif %}"></span>
+                            {% endfor %}
+                        </div>
+                        <a href="{{ url_for('views.view_restaurant', restaurant_id=restaurant.restaurant_id) }}" class="btn btn-outline-primary">View Menu</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="search-filter section-padding">
+    <div class="container">
+        <h2 class="text-center mb-4">Find Your Next Meal</h2>
+        <form method="GET" action="{{ url_for('views.browse_restaurants') }}">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search..." name="search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="category-filters text-center">
+            {% for category in categories %}
+                <a href="{{ url_for('views.browse_restaurants', category=category[0]) }}" class="btn btn-light btn-sm">{{ category[0] }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

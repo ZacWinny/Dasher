@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Sign Up for Membership</h2>
+
+<form method="POST" action="{{ url_for('views.membership_signup') }}">
+    <div class="form-group">
+        <label for="membership_type">Membership Type:</label>
+        <select name="membership_type" class="form-control" required>
+            <option value="monthly">Monthly</option>
+            <option value="annual">Annual</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+
+{% endblock %}

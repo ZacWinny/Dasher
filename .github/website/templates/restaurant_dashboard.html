@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Welcome, {{ restaurant.name }}!</h2>
+
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Pending Orders</h3>
+                </div>
+                <div class="card-body">
+                    {% if pending_orders %}
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Order Date</th>
+                                    <th>Total Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in pending_orders %}
+                                    <tr>
+                                        <td>{{ order.id }}</td>
+                                        <td>{{ order.customer.name }}</td>
+                                        <td>{{ order.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                                        <td>${{ order.total_price | round(2) }}</td>
+                                        <td>
+                                            <form method="POST" action="{{ url_for('views.accept_order', order_id=order.id) }}">
+                                                <button type="submit" class="btn btn-success btn-sm">Accept</button>
+                                            </form>
+                                            <form method="POST" action="{{ url_for('views.reject_order', order_id=order.id) }}">
+                                                <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p class="card-text">No pending orders at the moment.</p>
+                    {% endif %}
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('views.restaurant_orders') }}" class="btn btn-secondary">View All Orders</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Additional Actions</h3>
+                </div>
+                <div class="card-body">
+                    <a href="{{ url_for('views.restaurant_menu') }}" class="btn btn-primary btn-block">Manage Menu</a>
+                    <a href="{{ url_for('views.edit_restaurant_profile') }}" class="btn btn-secondary btn-block">Edit Restaurant Profile</a>
+                    <a href="{{ url_for('views.restaurant_reports') }}" class="btn btn-info btn-block">View Revenue Reports</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
