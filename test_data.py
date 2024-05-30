@@ -5,8 +5,7 @@ from werkzeug.security import generate_password_hash
 from main import app
 from website import db
 from website.models import Restaurant, Customer, OrderItem, MenuItem, Order, \
-    generate_restaurant_id, Review  # Adjust your import path
-
+    generate_restaurant_id, Review  
 fake = Faker('en_AU')
 
 food_categories = {
@@ -148,7 +147,7 @@ def generate_customers(num_customers):
     for _ in range(num_customers):
         customer = Customer(
             email=fake.email(),
-            password=generate_password_hash(fake.password(), method='pbkdf2:sha256'),  # Hash the password
+            password=generate_password_hash(fake.password(), method='pbkdf2:sha256'), 
             name=fake.name(),
             address=fake.address(),
             membership=random.choice([True, False]),
@@ -170,7 +169,7 @@ def generate_menu_items(num_items_per_restaurant):
 
             while True:
                 item_name = random.choice(list(
-                    category_items.keys())) if category_items else fake.food_name()  # If category items are available, choose from keys
+                    category_items.keys())) if category_items else fake.food_name()  
                 if item_name not in item_names:
                     item_names.add(item_name)
                     break
@@ -199,7 +198,7 @@ def generate_orders(num_orders):
     for _ in range(num_orders):
         customer = random.choice(customers)
         restaurant = random.choice(restaurants)
-        menu_items = list(restaurant.menu_items)  # Convert InstrumentedList to list
+        menu_items = list(restaurant.menu_items)
         selected_items = random.sample(menu_items, random.randint(1, 5))
         order_items = [OrderItem(order_id=None, menu_item_id=item.id, quantity=random.randint(1, 3)) for item in
                        selected_items]
